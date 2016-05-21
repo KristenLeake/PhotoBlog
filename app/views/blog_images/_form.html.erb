@@ -1,0 +1,19 @@
+<%= image_tag @blog_image.image_path %>
+<%= simple_form_for(@blog_image) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :image_path ,label: false%>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<style>
+.hidden{
+	display:none;
+}
+</style>

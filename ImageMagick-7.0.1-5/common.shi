@@ -1,0 +1,22 @@
+# Test environment
+top_srcdir='/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5'
+top_builddir='/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5'
+
+set -a
+COMPARE="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities/magick compare"
+COMPOSITE="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities/magick composite"
+CONJURE="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities/magick conjure"
+CONVERT="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities/magick convert"
+DISPLAY="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities/magick display"
+IDENTIFY="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities/magick identify"
+MAGICK="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities/magick"
+MONTAGE="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities/magick montage"
+VALIDATE="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/validate"
+DRAWTEST="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/drawtest"
+WANDTEST="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/wandtest"
+LD_LIBRARY_PATH="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/coders"
+MAGICK_CONFIGURE_PATH="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/config:/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/config"
+MAGICK_FILTER_MODULE_PATH="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/filters"
+PATH="/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/utilities:/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests:${PATH}"
+set +a

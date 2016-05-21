@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="wrap">
+  
+    <div class="blog-title">
+      <%= @blog.title %>
+    </div>
+    <p><small><em> Published <%= time_ago_in_words(@blog.created_at) %> ago</em></small></p>
+    Published At <%= @blog.created_at %>
+    <div class="blog-content">
+      <%= @blog.content %>
+    </div>
+
+  <p>
+  	<% @blog_images.each do |p| %>
+    <% if user_signed_in? %>
+        <div style="text-align:right; border-top:thin solid grey">
+    		  <%= link_to "Change Image", edit_blog_image_path(p) %>
+        </div>
+    <% end %>
+        <div>
+          <%= image_tag p.image_path.large%>
+        </div>
+  	<% end %>
+  </p>
+</div>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_blog_path(@blog) %> |
+  <%= link_to 'Delete Blog', @blog, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
+  <%= link_to 'Back', blogs_path %> 
+
+
+
+
+
+

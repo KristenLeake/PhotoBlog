@@ -1,0 +1,34 @@
+
+
+<%= link_to 'New Blog Entry', new_blog_path %>
+
+<div class="wrap">
+  <h3>All The Blog Posts</h3>
+
+  <% @blogs.each do |blog| %>
+    <div class="blog">
+      <div class="blog-title">
+      <%= link_to blog.title , blog %>
+      </div>
+      <div class="blog-content">
+        <% if blog.content.length > 250  %>
+            <p><%= blog.content[0..250] %>...<%= link_to '[read more]', blog %></p>
+        <% else %>
+            <p><%= blog.content %></p>
+        <% end %>
+      </div>
+
+      
+
+
+
+      <!-- <div> -->
+         <!-- link_to 'Show', blog  -->
+         <!-- link_to 'Edit', edit_blog_path(blog)  -->
+         <!-- link_to 'Delete Blog', blog, method: :delete, data: { confirm: 'Are you sure?' } -->
+      <!-- </div> -->
+      <!-- <br /> -->
+    </div>
+  <% end %>
+</div>
+

@@ -1,0 +1,29 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.blog{
+	padding-bottom: 100px;
+}
+.blog-content{
+	color: yellow;
+	color: #18223d;
+}
+.blog-title {
+	color: #bedcd9;
+	font-size: 20pt;
+	margin-bottom: 20px;
+}
+.blog-title a{
+	color: #bedcd9;
+	font-size: 20pt;
+	margin-bottom: 20px;
+}
+.wrap{
+	padding: 200px 400px;
+}
+.hidden{
+	display: none;
+}
+a{
+	text-decoration: none;
+}

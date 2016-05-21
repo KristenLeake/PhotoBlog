@@ -1,0 +1,61 @@
+
+<%= simple_form_for(@blog) do |f| %>
+
+<% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+      <% @blog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.error_notification %>
+
+
+    	<%= f.input :title, placeholder: 'Blog Title' , label:false %>
+
+    	<%= f.input :content , placeholder: 'Blog Content' , label:false %>
+      <br/> <br/> 
+
+      <%= f.fields_for :blog_images do |p| %>
+        <div class="field">
+          <h4><%= p.label :Choose_Images %></h4>
+          <%= p.file_field :image_path, :multiple => true, name: "blog_images[image_path][]"%>
+        </div>
+      <% end %>
+       <br/> <br/> 
+
+  <div class="form-actions">
+    <%= f.button :submit ,value:"Submit"%>
+  </div>
+<% end %>
+
+
+
+ 
+<style> 
+
+#blog_title, #blog_content { 
+    border: 2px solid #bedcd9; 
+    outline:0; 
+    height:25px; 
+    width: 275px; 
+    margin-bottom: 20px;
+  } 
+#blog_content { 
+  height: 100px;
+  width: 500px;
+}
+.btn {
+  font-size: 10pt;
+  height: 25px;
+  border: 2px solid #bedcd9;
+  border-radius: 10px;
+  background-color: #fff;
+}
+</style> 
+
+

@@ -1,0 +1,61 @@
+1..17
+ok
+PASS: tests/cli-pipe.tap 1
+pnm:- PNM 70x46 70x46+0+0 8-bit sRGB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 2
+-=>/var/folders/s4/b5bjw6ns2xgbp27gvv4ydnsm0000gn/T/magick-44055Vf-yRoxuaYIJ MIFF 70x46 70x46+0+0 8-bit TrueColor sRGB 10KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 3
+-=>/var/folders/s4/b5bjw6ns2xgbp27gvv4ydnsm0000gn/T/magick-44083pQUnBpLoWNEv PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 4
+ok
+PASS: tests/cli-pipe.tap 5
+/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/rose.pnm PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 6
+-=>/var/folders/s4/b5bjw6ns2xgbp27gvv4ydnsm0000gn/T/magick-44139IoU0KbY4s4bd MIFF 70x46 70x46+0+0 8-bit TrueColor sRGB 10KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 7
+-=>/var/folders/s4/b5bjw6ns2xgbp27gvv4ydnsm0000gn/T/magick-44167BFQ_7tn5xN3P PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 8
+/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/rose.pnm PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 9
+/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/rose.pnm PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.009
+magick: no image to apply a property "%w" @ warning/property.c/GetMagickPropertyLetter/2523.
+magick: unknown image property "%w" @ warning/property.c/InterpretImageProperties/3476.
+magick: no image to apply a property "%h" @ warning/property.c/GetMagickPropertyLetter/2414.
+magick: unknown image property "%h" @ warning/property.c/InterpretImageProperties/3476.
+magick: no image to apply a property "%m" @ warning/property.c/GetMagickPropertyLetter/2445.
+magick: unknown image property "%m" @ warning/property.c/InterpretImageProperties/3476.
+ok
+PASS: tests/cli-pipe.tap 10
+ok
+PASS: tests/cli-pipe.tap 11
+magick: no image to apply a property "%w" @ warning/property.c/GetMagickPropertyLetter/2523.
+magick: unknown image property "%w" @ warning/property.c/InterpretImageProperties/3476.
+magick: no image to apply a property "%h" @ warning/property.c/GetMagickPropertyLetter/2414.
+magick: unknown image property "%h" @ warning/property.c/InterpretImageProperties/3476.
+magick: no image to apply a property "%m" @ warning/property.c/GetMagickPropertyLetter/2445.
+magick: unknown image property "%m" @ warning/property.c/InterpretImageProperties/3476.
+/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/rose.pnm PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 12
+-=>/var/folders/s4/b5bjw6ns2xgbp27gvv4ydnsm0000gn/T/magick-44251tzOZIfJAHndl PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 13
+fd:5 PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 14
+/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/rose.pnm PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 15
+/Users/Yassi/desktop/photoblog/ImageMagick-7.0.1-5/tests/rose.pnm PPM 70x46 70x46+0+0 8-bit sRGB 9.67KB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 16
+pnm:- PNM 70x46 70x46+0+0 8-bit sRGB 0.000u 0:00.000
+ok
+PASS: tests/cli-pipe.tap 17
