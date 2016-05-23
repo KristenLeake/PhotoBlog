@@ -20,19 +20,29 @@
     	<%= f.input :content , placeholder: 'Blog Content' , label:false %>
       <br/> <br/> 
 
-      <%= f.fields_for :blog_images do |p| %>
+       <!-- f.fields_for :blog_images do |p| -->
         <div class="field">
-          <h4><%= p.label :Choose_Images %></h4>
-          <%= p.file_field :image_path, :multiple => true, name: "blog_images[image_path][]"%>
+          <h4><%= f.label :Choose_Images %></h4>
+          <%= f.file_field :image_path, :multiple => true, name: "blog_images[image_path][]"%>
         </div>
-      <% end %>
+      <!-- end  -->
        <br/> <br/> 
+ <%=  f.fields_for :blog_images do |p| %>
+  <div class="field">
+      <% if p.object.image_path? %>
+        <%= image_tag p.object.image_path.thumb.url %>
+        <%= p.label :remove_image %>
+        <%= p.check_box :_destroy %> 
+      <% end %>
+    </div>
+  <% end %>
+ 
+
 
   <div class="form-actions">
     <%= f.button :submit ,value:"Submit"%>
   </div>
 <% end %>
-
 
 
  

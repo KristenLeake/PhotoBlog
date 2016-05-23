@@ -15,6 +15,7 @@ class BlogImagesController < ApplicationController
   # GET /blog_images/new
   def new
     @blog_image = BlogImage.new
+    @blog_image.blog_id = params[:blog_id]
   end
 
   # GET /blog_images/1/edit
@@ -25,14 +26,14 @@ class BlogImagesController < ApplicationController
   # POST /blog_images.json
   def create
     @blog_image = BlogImage.new(blog_image_params)
+    @blog_image.blog_id = @blog_image.id
+    @blog_image.id = nil
 
     respond_to do |format|
       if @blog_image.save
-        format.html { redirect_to @blog_image, notice: 'Blog image was successfully created.' }
-        format.json { render :show, status: :created, location: @blog_image }
+        format.html { redirect_to '/blogs/' + @blog_image.blog_id.to_s, notice: 'Blog image was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @blog_image.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -70,6 +71,6 @@ class BlogImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_image_params
-      params.require(:blog_image).permit(:image_path, :blog_id)
+      params.require(:blog_image).permit(:image_path, :blog_id, :id)
     end
 end

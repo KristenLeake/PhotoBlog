@@ -10,25 +10,31 @@
       <%= @blog.content %>
     </div>
 
-  <p>
+  <div class="center">
   	<% @blog_images.each do |p| %>
     <% if user_signed_in? %>
         <div style="text-align:right; border-top:thin solid grey">
     		  <%= link_to "Change Image", edit_blog_image_path(p) %>
         </div>
     <% end %>
-        <div>
+        
           <%= image_tag p.image_path.large%>
-        </div>
+        
   	<% end %>
-  </p>
+  </div>
 </div>
 <% if user_signed_in? %>
-  <%= link_to 'Edit', edit_blog_path(@blog) %> |
+  <%= link_to 'Edit', edit_blog_path(@blog) %> | 
+  <%= link_to 'Add More Images', new_blog_image_path + '?blog_id=' + @blog.id.to_s %> |
   <%= link_to 'Delete Blog', @blog, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <% end %>
   <%= link_to 'Back', blogs_path %> 
-
+<style>
+  .center{
+    text-align: center;
+    display: inline-block;
+  }
+</style>
 
 
 
