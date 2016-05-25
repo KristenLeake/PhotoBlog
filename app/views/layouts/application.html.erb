@@ -7,20 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li><%= link_to "About", static_about_path %></li>
-			<li><%= link_to "Blog Posts", blogs_path %></li>
-			<% if user_signed_in? %>
-			<li><%= link_to "New Blog", new_blog_path %></li>
-			<% end %>
-			<% if user_signed_in? %>
-				<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-			<% else %>
-				<%= link_to "Sign In", new_user_session_path%>
-			<% end %>
-		</ul>
-	</nav>
+		<%= render 'layouts/nav' %>
 		<%= yield %>
 
 	

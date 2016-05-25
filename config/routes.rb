@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'static/about'
-
+  get 'static/faq'
   resources :blog_images
   resources :blogs
 
